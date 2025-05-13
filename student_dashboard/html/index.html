@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/course.css" />
+    <!-- <link rel="stylesheet" href="../css/skills.css" /> -->
+    <link rel="stylesheet" href="../css/tasks.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/quick_links.css" />
+    <!-- <link rel="stylesheet" href="../css/timer.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Student Help DashBorad | Ayushman</title>
+</head>
+
+<body>
+    <button id="nav-toggle-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+    <!-- The sidebar Navigation -->
+    <nav>
+        <!-- nav header section  -->
+
+        <div id="nav-header">
+            <div id="nav-header-container">
+                <div id="nav-logo"><i class="fa-regular fa-circle-user" id="nav-logo-icon"></i></div>
+                <span id="nav-header-title">Student
+                    <div id="nav-header-date"></div>
+                </span>
+            </div>
+        </div>
+
+        <!-- nav main section -->
+        <div id="nav-main">
+            <a href="#home" class="nav-btns hover-nav nav-active"><i class="fa-solid fa-house tab-icon"></i>Home&#8205;
+                &#8205; &#8205;&#8205; &#8205; &#8205; &#8205; &#8205; &#8205; &#8205; </a>
+            <a href="#courses" class="nav-btns hover-nav"><i class="fa-solid fa-book tab-icon"></i>My Courses</a>
+            <!-- <a href="#skills" class="nav-btns hover-nav"><i class="fa-solid fa-fire tab-icon"></i>Skills Tracker</a> -->
+            <a href="#tasks" class="nav-btns hover-nav"><i class="fa-solid fa-list-check tab-icon"></i>Tasks To-Do</a>
+            <!-- <a href="#timer" class="nav-btns hover-nav"><i class="fa-solid fa-clock tab-icon"></i>Study Timer</a> -->
+            <a href="#quick-links-section" class="nav-btns hover-nav"><i
+                    class="fa-brands fa-squarespace tab-icon"></i>Quick
+                Links</a>
+        </div>
+
+        <!-- nav footer section  -->
+        <div id="nav-footer">
+            <div class="contact-icons">
+                <a href="https://www.instagram.com/ayushman_singh.01/" class="nav-icons"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ayushman-kumar-116aa7328/" class="nav-icons"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Ayushman404" class="nav-icons"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <span id="footer-desc" style="text-align: center;">Student Help Dashboard<br>Made by- Ayushman</span>
+        </div>
+    </nav>
+    <!-- sidebar navigation ends -->
+
+    <!-- main content  -->
+
+    <div class="main-content">
+        <section id="home" class="section">
+            <div class="main-home" id="home">
+                <div class="hero-container">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Welcome to Your Student Dashboard</h1>
+                        <p class="hero-subtitle">Track your progress, manage tasks, and stay organized with ease.</p>
+                    </div>
+                    <div class="hero-image">
+                        <img src="../assets/365719.webp" alt="Student Dashboard Illustration" class="responsive-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="section">
+
+            <!-- form to add elements -->
+            <div class="modal-overlay" id="modal-overlay-addCourse">
+                <div class="form-container">
+                    <button class="close-btn" id="closeCourseFormBtn">&times;</button>
+                    <h2>Add New Course</h2>
+                    <form id="addCourseForm">
+                        <div class="form-group">
+                            <label for="courseTitle">Course Title</label>
+                            <input type="text" id="courseTitle" name="courseTitle" placeholder="Course Name" required />
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label for="professor">Professor Name</label>
+                            <input type="text" id="professor" name="professor" required />
+                        </div> -->
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="credits">Credits</label>
+                                <input type="number" step="0.01" id="credits" name="credits" placeholder="Enter the Credit of the Course" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="totalMarks">Total-Marks</label>
+                                <input type="text" id="totalMarks" name="totalMarks" placeholder="10-30-10-50.. for multiple tests" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="marks">Marks Obtained</label>
+                                <input type="text" id="marks" name="marks" placeholder="10-30-10-50.. for multiple tests" />
+                            </div>
+                            <div class="form-group">
+                                <label for="weight">Weightage(in % )</label>
+                                <input type="text" id="weight" name="weight" placeholder="10-30-10-50.. for multiple tests"/>
+                            </div>
+                        </div>
+                        <!-- <div class="form-row">
+                            <div class="form-group">
+                                <label for="midsem">Midsem Marks</label>
+                                <input type="number" step="0.01" id="midsem" name="midsem" />
+                            </div>
+                            <div class="form-group">
+                                <label for="midsem-weight">Midsem Weightage(in % )</label>
+                                <input type="number" step="0.01" id="midsem-weight" name="midsem-weight" />
+                            </div>
+                        </div> -->
+                        <button type="submit" class="submit-btn form-btn">Add Course</button>
+                    </form>
+                </div>
+            </div>
+            <!-- form to add elements ends -->
+
+            <div class="wrapper">
+                <header class="header">
+                    <h1><i class="fa-solid fa-book tab-icon"></i>My Courses</h1>
+                    <button class="add-course-btn" id="addCourseBtn">
+                        <i class="fas fa-plus"></i> Add Course
+                    </button>
+                </header>
+
+                <main class="course-container-wrapper">
+                    <div class="course-container" id="course-card-container">
+                        <!-- Example Course Card -->
+                    </div>
+                </main>
+            </div>
+
+            <div class="course-footer">
+                <h3>Course Statistics</h3>
+                <ul class="course-statistics" id="course-stats-footer">
+                    <li id="course-stat-total-course"></li>
+                    <li id="total-course-credits"></li>
+                    <li id="course-stat-cpi"></li>
+                    <!-- <li></li> -->
+                </ul>
+            </div>
+        </section>
+
+
+
+        <section id="tasks" class="section">
+            <div class="task-header">
+                <h1><i class="fa-solid fa-list-check tab-icon"></i>Tasks</h1>
+                <button class="task-add-btn" id="taskAdd">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+
+            <!-- task add modal -->
+            <div class="modal-overlay" id="modalTask">
+                <div class="form-container">
+                    <button class="close-btn" id="closeTaskFormBtn">&times;</button>
+                    <h2>Add New Task</h2>
+                    <form id="addTaskForm">
+                        <div class="form-group">
+                            <label for="taskTitle">Task Title</label>
+                            <input type="text" id="taskTitle" name="taskTitle" required />
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="taskPriority">Task Priority</label>
+                                <select id="taskPriority" name="taskPriority">
+                                    <option value="High">High</option>
+                                    <option value="Moderate">Moderate</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="taskDueDate">Due Date</label>
+                                <input type="Date" id="taskDueDate" name="taskDueDate" />
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Add Task</button>
+                    </form>
+                </div>
+            </div>
+            <!-- task add modal end  -->
+            <div class="task-section-wrapper">
+                <div class="task-list" id="task-list-container">
+                    <!-- Example Task -->
+                    <!-- <div class="task-item">
+
+                        <div class="task-content">
+                            <span class="task-title">Finish Portfolio</span>
+                            <div class="task-detail">
+                                <span class="task-priority task-meta">Priority: High</span>
+                                <span class="task-due task-meta">Due: 13/5/2025</span>
+                            </div>
+                        </div>
+                        <div class="task-actions">
+
+                            <button title="mark complete"><i
+                                    class="fa-regular fa-circle-check mark-complete-task"></i></button>
+                            <button title="Edit"><i class="fas fa-edit"></i></button>
+                            <button title="Delete" class="delete-btn delete-task-btn"><i
+                                    class="fas fa-trash delete-btn delete-task-btn"></i></button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- QUICK LINKS SECTION -->
+        <section id="quick-links-section" class="section">
+
+            <!-- modal overlay for the quicklinks add form -->
+
+            <div id="quick-link-modal" class="modal-overlay">
+                <!-- Add the form here -->
+                <form id="quick-link-form" class="ql-form">
+                    <h3 class="ql-form-title">➕ Add Quick Link</h3>
+
+                    <div class="ql-form-group">
+                        <label for="ql-title">Title</label>
+                        <input type="text" id="ql-title" name="ql-title" placeholder="e.g., Moodle" required />
+                    </div>
+
+                    <div class="ql-form-group">
+                        <label for="ql-url">URL</label>
+                        <input type="url" id="ql-url" name="ql-url" placeholder="e.g., https://moodle.example.com" />
+                    </div>
+
+                    <div class="ql-form-group">
+                        <label for="ql-note">Note / Description</label>
+                        <textarea id="ql-note" name="ql-note" rows="2"
+                            placeholder="Optional: reminder or description"></textarea>
+                    </div>
+
+                    <div class="ql-form-group">
+                        <label for="ql-tag">Tag / Category</label>
+                        <input type="text" id="ql-tag" name="ql-tag" placeholder="e.g., Academic, Notes" />
+                    </div>
+
+                    <div class="ql-form-buttons">
+                        <button type="submit" class="ql-form-submit">Save Link</button>
+                        <button type="button" class="ql-form-cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- modal ends  -->
+
+            <div class="ql-header">
+                <h2 class="ql-title"><i class="fa-brands fa-squarespace"></i> Quick Links</h2>
+            </div>
+            <div class="ql-grid" id="ql-card-holder">
+                <!-- Link Card Example -->
+                <!-- <div class="ql-card">
+                    <div class="ql-card-title"><i class="fas fa-file"></i>Moodle</div>
+                    <a href="https://moodle.example.com" target="_blank" class="ql-link">https://moodle.example.com</a>
+                    <div class="ql-tag">Academic</div>
+                    <button title="Delete" class="delete-btn delete-ql-card-btn"><i
+                            class="fas fa-trash delete-btn delete-ql-card-btn"></i></button>
+                </div> -->
+
+
+                <!-- Add New Card -->
+                <div class="ql-card ql-add-card" id="ql-add-card-btn">
+                    <i class="fas fa-plus"></i> Add New
+                </div>
+            </div>
+        </section>
+
+
+        <script src="../javascript/main.js"></script>
+        <script src="../javascript/courses.js"></script>
+        <script src="../javascript/todo.js"></script>
+        <!-- <script src="../javascript/timer.js"></script> -->
+        <script src="../javascript/quickLinks.js"></script>
+</body>
+
+</html>

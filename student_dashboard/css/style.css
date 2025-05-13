@@ -1,0 +1,211 @@
+:root{
+    --primary-color:#8001e0;
+    --background-color:#161616;
+    --secondary-color: #a9a9a9db;
+    --dark-text-color: #1f2937;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    /* flex-direction: column; */
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #222526);
+}
+
+
+nav{
+    background-color: var(--secondary-color);
+    width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+}
+#nav-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 250px;
+    width: 250px;
+    height: 20%;
+    /* background-color: yellow; */
+}
+#nav-header-container{
+    /* background-color: green; */
+    width: 250x;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#nav-header-title{
+    color: var(--dark-text-color);
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    user-select: none;
+}
+/* #nav-logo{
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--primary-color);
+    background-size: cover;
+    border: 2px solid #fff;
+    border-radius: 50%;
+} */
+#nav-logo-icon{
+    height: 3rem;
+    width: 3rem;
+    font-size: 3rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+#nav-header-date{
+    width: 25%;
+    height: 30px;
+    font-size: 15px;
+    color: var(--dark-text-color);
+}
+#nav-main{
+    height: 65%;
+    width: 250px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+
+}
+.tab-icon{
+    margin-right: 15px;
+}
+.nav-btns{
+    text-align: center;
+    width: 240px;
+    height: 7vh;
+    background-color: #d3e2f6;
+    margin: 5px 5px;
+    padding: 10px 7px;
+    /* border: 2px solid #fff; */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-text-color);
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.hover-nav:hover{
+    filter: brightness(1.1);
+}
+.nav-active{
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+#nav-footer{
+    width: 250px;
+    height: 15%;
+    /* background-color: yellow; */
+    /* color: var(--background-color); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-icons{
+    width: 140px;
+    height: 25px;
+    font-size: 25px;
+    color: var(--background-color);
+    /* background-color: red; */
+    margin: 15px 5px;
+    display: flex;
+
+    justify-content: space-around;
+}
+.nav-icons{
+    /* color: var(--background-color); */
+    color: #3e3e3e;
+}
+
+/* --- Base Styles --- */
+/* #nav-toggle-btn {
+  display: none;
+} */
+
+/* --- Responsive Mobile Sidebar --- */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    width: 250px;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+  }
+
+  nav.active {
+    left: 0;
+  }
+
+  #nav-toggle-btn {
+    display: block;
+    position: fixed;
+    top: 25px;
+    left: 15px;
+    z-index: 1100;
+    background-color: var(--secondary-color);
+    color: var(--dark-text-color);
+    font-size: 22px;
+    padding: 6px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
+}
+
+
+
+/* ---- DESKTOP LAYOUT ---- */
+
+.main-content {
+  margin-left: 250px; /* same as sidebar width */
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  width: calc(100% - 250px);
+}
+
+section {
+  padding: 30px 20px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  min-height: 100vh; /* Optional: full-screen sections */
+}

@@ -1,0 +1,231 @@
+#quick-links-section {
+    max-height: 100vh;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    overflow-y: auto;
+    }
+
+  .ql-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-left: 1.3rem;
+  }
+
+  .ql-title {
+    font-size: 1.5rem;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--primary-color);
+    margin: 0;
+  }
+
+  /* .ql-count {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 500;
+  } */
+
+  .ql-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+    padding-left: 1.3rem;
+
+  }
+
+  .ql-card {
+    background-color: var(--secondary-color);
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    font-size: 0.85rem;
+  }
+
+  .ql-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .ql-card-title {
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 1rem;
+    color: #222;
+  }
+
+  .ql-link {
+    word-break: break-all;
+    color: #444;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 6px;
+    text-decoration: underline;
+  }
+
+  .ql-note {
+    font-size: 0.8rem;
+    color: #444;
+    margin-bottom: 6px;
+  }
+
+  .ql-tag {
+    font-size: 0.7rem;
+    background-color: #292929;
+    color: var(--primary-color);
+    padding: 3px 6px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .ql-add-card {
+    border: 2px dashed var(--primary-color);
+    background-color: #292929;
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    text-align: center;
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .ql-add-card:hover {
+    background-color: #333;
+  }
+
+  /*  Responsive Adjustments for Small Screens */
+  @media (max-width: 600px) {
+    .ql-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 10px;
+    }
+
+    .ql-card {
+      padding: 10px 12px;
+      font-size: 0.75rem;
+    }
+
+    .ql-card-title {
+      font-size: 0.9rem;
+    }
+
+    .ql-link,
+    .ql-note {
+      font-size: 0.7rem;
+    }
+
+    .ql-title {
+      font-size: 1.3rem;
+    }
+  }
+
+
+
+
+
+
+  /* Main Form Wrapper */
+.ql-form {
+  background: rgba(218, 214, 214, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  color: #222;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+.ql-form-title {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #222;
+}
+
+/* Form Groups */
+.ql-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.ql-form-group label {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.ql-form-group input,
+.ql-form-group textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #e7e5e599;
+  background-color: rgba(160, 157, 157, 0.803);
+  color: #222;
+  font-size: 0.9rem;
+}
+
+.ql-form-group input:focus,
+.ql-form-group textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Buttons */
+.ql-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.ql-form-submit,
+.ql-form-cancel {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.ql-form-submit {
+  background-color: var(--primary-color);
+  color: #222;
+}
+
+.ql-form-submit:hover {
+  background-color: #da70d6;
+}
+
+.ql-form-cancel {
+  background-color: rgba(243, 230, 230, 0.484);
+  color: #222;
+  border: 1px solid #555;
+}
+
+.ql-form-cancel:hover {
+  background-color: rgba(194, 181, 181, 0.558);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .ql-form {
+    padding: 16px;
+    max-width: 90vw;
+  }
+
+  .ql-form-buttons {
+    flex-direction: column;
+  }
+}
