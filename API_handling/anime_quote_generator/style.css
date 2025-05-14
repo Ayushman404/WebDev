@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --light-text: whitesmoke;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./images/aot_bg_scouts.png');
+    backdrop-filter: brightness(0.5);
+    background-size: cover;
+}
+.pageHeader{
+    width: 100%;
+    height: 20%;
+    /* background-color: rgba(255, 255, 0, 0.577); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#headerText{
+    font-family: "Luckiest Guy";
+    color: rgba(255, 255, 0, 0.778);
+    filter: saturate(0.5);
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    border-bottom: 0.2rem solid rgba(255, 255, 0, 0.778);
+}
+.main-content{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(194, 221, 244, 0.408); */
+}
+.form-section{
+    width: 100%;
+    height: 30%;
+    /* background-color: rgba(0, 255, 255, 0.43); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.form-section #generate-quote-btn{
+    font-size: 0.8rem;
+    font-family: "Luckiest Guy", "Gill Sans";
+    background-color: brown;
+    color: white;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.2rem;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 2px 7px whitesmoke;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+#generate-quote-btn:hover{
+    transform: scale(1.1);
+}
+#theme-selecter{
+    background-color: brown;
+    color: white;
+    box-shadow: 2px 2px 7px whitesmoke;
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+    border: none;
+    border-radius: 7px;
+    font-family: "Luckiest Guy", "Gill Sans";
+}
+.quote-card-section{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(3, 111, 75, 0.403); */
+}
+#quote-card{
+    background: rgba(240, 158, 158, 0.529);
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1.2rem;
+}
+#quote-text{
+    color: var(--light-text);
+    width: 90%;
+    height: 70%;
+    margin:1rem;
+    font-size: 1.2rem;
+    font-family: "Gill Sans";
+    /* letter-spacing: .2rem; */
+
+    border-left: .2rem solid var(--light-text);
+    padding: 1rem;
+}
+#quote-meta{
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

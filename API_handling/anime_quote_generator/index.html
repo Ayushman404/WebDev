@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Anime Quote Generator</title>
+</head>
+
+<body>
+    <header class="pageHeader">
+        <h1 id="headerText">Anime Quote Hub</h1>
+    </header>
+
+    <main class="main-content">
+        <div class="form-section">
+            <button id="generate-quote-btn" onclick="generateQuote()">Generate Quote</button>
+            <select id="theme-selecter">
+                <option value="one piece">One Piece</option>
+                <option value="naruto">Naruto</option>
+                <option value="attack on titan">Attack On Titans</option>
+            </select>
+        </div>
+
+        <div class="quote-card-section">
+            <div id="quote-card">
+                <h2 id="quote-text">Quote Here!!</h2>
+                <p id="quote-meta">Character: Naruto || Anime: Naruto</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
