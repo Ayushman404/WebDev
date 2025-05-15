@@ -14,7 +14,7 @@ body{
     width: 100vw;
     background-image: url('./images/one_piece_background_dark_red.png');
     backdrop-filter: brightness(0.5);
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .pageHeader{
     width: 100%;
