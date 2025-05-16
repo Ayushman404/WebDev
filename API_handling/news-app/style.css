@@ -117,7 +117,6 @@ header .searchBox{
 .news-para{
     display: flex;
     flex-direction: column;
-    /* background-color: yellow; */
 }
 .read-more{
     display: flex;
