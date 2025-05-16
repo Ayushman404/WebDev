@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>News App</title>
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <span class="headTitle">Get Latest News</span>
+        <div class="searchBox">
+            <form id="search-form">
+                <input type="text" id="search-text" />
+                <button type="submit" id="search-btn">Get News</button>
+                <!-- category dropdown -->
+                <select name="category" id="category-select">
+                    <option value="general" id="catg0" class="category-option">General</option>
+                    <option value="nation" id="catg1" class="category-option">Nation</option>
+                    <option value="sports" id="catg2" class="category-option">Sports</option>
+                    <option value="technology" id="catg3" class="category-option">Tech</option>
+                    <option value="entertainment" id="catg4" class="category-option">Entertainment</option>
+                </select>
+            </form>
+            <div id="status-message"></div>
+        </div>
+
+        <!-- main content  -->
+    </header>
+    <div id="card-container">
+        <!-- example card  -->
+        <!-- <div class="card-item">
+            <div class="cardTitle">Trump Got Bitten in Public rage</div>
+            <div class="news-para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, blanditiis
+                doloribus! Animi numquam quae tempore. Quibusdam quis illum fugiat, quae maxime ullam ratione?
+                <button class="read-more">Read More</button>
+                <div class="more-info-none">
+                    <p class="more-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, perspiciatis.
+                        Voluptatibus harum odit, iste labore accusantium vero tenetur similique quia enim ducimus et ab
+                        ut quidem sed nesciunt quasi nulla deserunt animi? Tempora temporibus saepe fugiat eligendi
+                        itaque nulla, deserunt debitis placeat enim et numquam maiores, reiciendis quod magni facere
+                        explicabo beatae? Odit, quaerat illo?</p>
+                </div>
+            </div>
+        </div> -->
+        
+
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
