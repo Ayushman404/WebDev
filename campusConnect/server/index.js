@@ -15,13 +15,14 @@ app.use(express.urlencoded({extended: true}));
 //Import Routes
 const authRoute = require('./routes/auth.js');
 const postRoute = require('./routes/posts.js');
+const userRoute = require('./routes/user.js');
+const commentRoute = require('./routes/comment.js');
 
 app.use('/api/auth', authRoute);
 app.use('/api/posts', postRoute);
+app.use('/api/users', userRoute);
+app.use('/api/comment', commentRoute);
 
-app.get('/', (req, res)=>{
-    res.json({name: "Ayushman", email: "ayushman123@gamil.com", password: "12345"});
-})
 
 
 //Database connection
@@ -34,7 +35,7 @@ connectMongo(process.env.DB_URL).then(()=>{
 
 
 app.listen(process.env.PORT, ()=>{
-    console.log("server started at Port 8000");
+    console.log(`server started at Port ${process.env.PORT}`);
 })
 
 

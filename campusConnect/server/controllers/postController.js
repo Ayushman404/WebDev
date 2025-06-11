@@ -2,8 +2,18 @@ const Post = require('../models/post.models.js');
 const mongoose = require('mongoose');
 
 exports.createPost = async (req, res) => {
-  const post = await Post.create({ content: req.body.content, author: req.user.userId, likes: [] });
-  res.json(post);
+  try {
+    console.log("Post creation started");
+    const post = await Post.create({ content: req.body.content, author: req.user.userId, likes: [] });
+    console.log(post);
+    return res.status(201).json({ success: true, msg: "Post created" });
+  } catch (error) {
+    console.error(error)
+    return res.status(400).json({ success: false, msg: "Something went wrong" });
+  }
+  
+  
+
 };
 
 exports.getPosts = async (req, res) => {
@@ -62,4 +72,46 @@ exports.delPostById = async (req, res)=>{
   }
 
   
+};
+
+exports.handleLike = async (req, res) => {
+  try {
+    const userId = req.user.userId;
+    const postId = req.params.postId;
+
+    const post = await Post.findById(postId);
+
+console.log("Post found:", post);
+
+    if (!post) {
+      return res.status(404).json({ msg: "Post not found" });
+    }
+
+    const alreadyLiked = post.likes.includes(userId);
+
+    if (alreadyLiked) {
+      // Unlike
+      const updatedPost = await Post.findByIdAndUpdate(postId, {
+        $pull: { likes: userId }
+      }, {new: true});
+      console.log('Likes after update:', updatedPost.likes);
+      return res.status(200).json({
+        msg: alreadyLiked ? "Post unliked" : "Post liked",
+        likes: updatedPost.likes, // send updated likes
+      });
+    } else {
+      // Like
+      const updatedPost = await Post.findByIdAndUpdate(postId, {
+        $addToSet: { likes: userId } // avoid duplicates
+      }, {new: true});
+      console.log('Likes after update:', updatedPost.likes);
+      return res.status(200).json({
+        msg: alreadyLiked ? "Post unliked" : "Post liked",
+        likes: updatedPost.likes, // send updated likes
+      });
+    }
+  } catch (error) {
+    console.error("Like error:", error);
+    res.status(500).json({ msg: "Internal server error" });
+  }
 };
