@@ -24,7 +24,7 @@ exports.getPosts = async (req, res) => {
 exports.getPostsByUser = async (req, res)=>{
   const userId = req.params.userId;
   const objectId = new mongoose.Types.ObjectId(userId);
-  const userPosts = await Post.find({ author: objectId });
+  const userPosts = await Post.find({ author: objectId }).populate('author', 'name');;
 
   if(!userPosts){
     return res.status(404).json({msg: "User Not Found"});

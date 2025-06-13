@@ -40,7 +40,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Create", path: "/create" },
-    { name: "Profile", path: "/profile/6845818fae733c0fb0e4d2db" },
+    { name: "Profile", path: `/profile/${userId}`},
     { name: "Signup", path: "/signup" },
     isLoggedIn
       ? { name: "Logout", action: handleLogout }
