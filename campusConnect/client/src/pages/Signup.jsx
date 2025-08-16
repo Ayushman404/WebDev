@@ -11,7 +11,7 @@ export default function Signup() {
 
   const handleSignup = async () => {
     try {
-      await axios.post('/api/auth/signup', { email, password, name, bio });
+      await axios.post('http://localhost:8000/api/auth/signup', { email, password, name, bio });
       alert('Signup successful');
       navigate('/login');
     } catch (err) {

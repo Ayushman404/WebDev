@@ -11,7 +11,7 @@ export default function Profile() {
 
   useEffect(() => {
     axios
-      .get(`/api/auth/me`, {
+      .get(`http://localhost:8000/api/auth/me`, {
         headers: { Authorization: localStorage.getItem('token') },
       })
       .then((res) => {
@@ -25,7 +25,7 @@ export default function Profile() {
       });
 
     axios
-      .get(`/api/posts/user/${userId}`, {
+      .get(`http://localhost:8000/api/posts/user/${userId}`, {
         headers: { Authorization: localStorage.getItem('token') },
       })
       .then((res) => {

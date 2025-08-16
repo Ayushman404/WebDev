@@ -7,7 +7,7 @@ export default function PostDetails() {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    axios.get(`/api/posts/${postId}`, {
+    axios.get(`http://localhost:8000/api/posts/${postId}`, {
       headers: { Authorization: localStorage.getItem('token') },
     })
     .then((res) => setPost(res.data.post))

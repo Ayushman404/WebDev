@@ -4,18 +4,18 @@ import tailwindcss from '@tailwindcss/vite'
 
 
 // https://vite.dev/config/
-export default defineConfig({
-  server:{
-    port:8000,
-    proxy:{
-      '/api': {
-        target: 'http://localhost:8000',
-        changeOrigin: true,
-        secure: false,
-      }
-    }
-  },
-  plugins: [react(),
-    tailwindcss(),
-  ],
-})
+// export default defineConfig({
+//   server:{
+//     port:8000,
+//     proxy:{
+//       '/api': {
+//         target: 'http://localhost:8000',
+//         changeOrigin: true,
+//         secure: false,
+//       }
+//     }
+//   },
+//   plugins: [react(),
+//     tailwindcss(),
+//   ],
+// })

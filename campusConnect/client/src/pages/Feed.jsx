@@ -20,7 +20,7 @@ export default function Feed() {
         return;
       }
 
-      await axios.get('/api/posts', {
+      await axios.get('http://localhost:8000/api/posts', {
       headers: { Authorization: localStorage.getItem('token') },
     })
     .then((res) => {
@@ -40,7 +40,7 @@ export default function Feed() {
 
   const handleLikeToggle = async (postId) => {
   try {
-    const res = await axios.post(`/api/posts/${postId}/like`, null, {
+    const res = await axios.post(`http://localhost:8000/api/posts/${postId}/like`, null, {
       headers: { Authorization: localStorage.getItem('token') }
     });
 
